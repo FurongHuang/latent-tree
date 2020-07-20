@@ -1,0 +1,18 @@
+# How to import SVDLIB C file to latenttree.cpp project
+# 1. include the header file in my project as necessary. 
+The path to SVDLIBC\svdlib.h should be included in C/C++ -> General -> Additional Include Directories
+extern "C"{
+#include "SVDLIBC\svdlib.h"
+}
+# 2. adding the file path of the .lib file to
+ Project Properties -> VC++ Directories -> Library Directories
+
+# 3.adding the file path of the .lib file  to 
+Proj Properties -> C/C++ -> Additional Include Directories
+
+# 4. list the import library (.lib) in the 
+linker -> input -> Additional Dependencies section, include the path as well as the file name. 
+Or just the file name if the path is already included.
+
+# 5. place the DLL itself(.dll) in the same directory as the executable, or any path included. 
+

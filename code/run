@@ -1,0 +1,51 @@
+#! /bin/bash
+
+NVAR=12419 	# NIPS words
+NX=1500 	# NIPS documents
+VOCA_SIZE=1	# vocabulary size
+KHID=2
+edgeD_MAX=(( -log(0.80) ))
+
+//#define NORMALIZE
+THRE_COREVIEW=3
+//#define WITH_PARA
+//#define BINARY // binary case
+#define WEIGHTED // weighted case
+
+
+FILE_G="datasets/nips/samples.txt"
+matlabsample_name="result/nips/sample_matlab.TXT"
+adjMatrix_name="result/nips/DistanceMatrix.TXT"
+category_name="result/nips/category.TXT"
+nodelist_name="result/nips/nodelist.TXT"
+adjSparse_name="result/nips/adjsparse.TXT"
+neighborhood_name="result/nips/neighborhood.TXT"
+edgepot_name="result/nips/edgePot.TXT"
+
+
+//#define useDistance
+#define nouseDistance
+//#define joint_prob
+#define condi_prob
+
+
+//////////////////////////////////////////////////////////////
+
+USER_DEFINED_EDGES=0	# 0 for all edges
+MAX_WEIGHT=150
+alpha0=0
+#define CENTERED
+#define UNCENTERED
+LEARNRATE=1e-9		#hash define
+MINITER=100		#hash define
+MAXITER=10000		#hash define
+THRESHOLD=4		#hash define
+MAXDISTANCE=1000	#hash define
+TOLERANCE=1e-6		#hash define
+pinvtoler=1e-6		#hash define
+eps=1e-6		#hash define
+EPS=1e-6		#hash define
+
+
+
+

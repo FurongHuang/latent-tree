@@ -1,0 +1,11 @@
+
+*.filters
+*.tlog
+*.sdf
+*.sln
+*.idb
+*.ipch
+*.vcproj
+*.vcxproj
+*.exp
+*.htm
